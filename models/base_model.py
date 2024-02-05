@@ -3,13 +3,18 @@ from datetime import datetime
 
 
 class BaseModel:
-    """A simple calculator class for basic arithmetic operations.
+    """
+    A simple calculator class for basic arithmetic operations.
 
     Attributes:
     - id (str): the identefier of each instance.
     - created_at(str): the datetime when the insance is created
+    - updated_at(str):  the current datetime when an instance is created and it will be updated every time you change your object
 
     Methods:
+    - __str__: A method returning the string representation of the BaseModel
+    - save: Updates the public instance attribute (updated_at) with the current datetime
+    - to_dict: returns a dictionary containing all keys/values of __dict__ of the instance
     """
     
     def __init__(self):
