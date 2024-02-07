@@ -4,7 +4,7 @@ Define the BaseModel class
 """
 import uuid
 from datetime import datetime
-from models import storage
+import models
 
 
 class BaseModel:
@@ -31,7 +31,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self)
+            models.storage.new(self)
         else:
             # create instance from dict
             for k, v in kwargs.items():
@@ -54,7 +54,7 @@ class BaseModel:
         Updates the public instance attribute (updated_at)
         with the current datetime.
         """
-        storage.save()
+        models.storage.save()
         self.updated_at = datetime.now()
 
     def to_dict(self):

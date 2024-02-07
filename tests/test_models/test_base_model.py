@@ -53,7 +53,7 @@ class BaseModelTest(unittest.TestCase):
         # Check if 'created_at' and 'updated_at' are in ISO 8601 format
         self.assertTrue(datetime.fromisoformat(base_dict['created_at']))
         self.assertTrue(datetime.fromisoformat(base_dict['updated_at']))
-        # Check the types
+        # Check the typ
         self.assertIsInstance(base_dict['id'], str)
         self.assertIsInstance(base_dict['created_at'], str)
         self.assertIsInstance(base_dict['updated_at'], str)
