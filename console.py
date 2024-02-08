@@ -100,6 +100,26 @@ class HBNBCommand(cmd.Cmd):
                 return
             print("** no instance found **")
 
+    def do_all(self, arg):
+        """Prints all string representation of all instances
+            based or not on the class name"""
+        parser = argparse.ArgumentParser()
+        parser.add_argument('arguments', nargs='*')
+        args = parser.parse_args(arg.split())
+        objects = storage.all()
+        if len(args.arguments) == 0:
+            for k in objects:
+                print(objects[k])
+        else:
+            try:
+                obj = globals()[args.arguments[0]]
+            except KeyError:
+                print("** class doesn't exist **")
+                return
+            for k in objects:
+                if args.arguments[0] == str(objects[k].__class__.__name__):
+                    print(objects[k])
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
