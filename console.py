@@ -145,6 +145,13 @@ class HBNBCommand(cmd.Cmd):
             objects = storage.all()
             for k in objects:
                 if k == key:
+                    try:
+                        args.arguments[3] = int(args.arguments[3])
+                    except ValueError:
+                        try:
+                            args.arguments[3] = float(args.arguments[3])
+                        except ValueError:
+                            pass
                     setattr(objects[k], args.arguments[2], args.arguments[3])
                     for k in objects:
                         objects[k].save()
