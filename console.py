@@ -120,6 +120,37 @@ class HBNBCommand(cmd.Cmd):
                 if args.arguments[0] == str(objects[k].__class__.__name__):
                     print(objects[k])
 
+    def do_update(self, arg):
+        """ Updates an instance based on the class name and id by adding or
+            updating attribute (save the change into the JSON file)"""
+        parser = argparse.ArgumentParser()
+        parser.add_argument('arguments', nargs='*')
+        args = parser.parse_args(arg.split())
+        objects = storage.all()
+        if len(args.arguments) == 0:
+            print("** class name missing **")
+        elif len(args.arguments) == 1:
+            print("** instance id missing **")
+        elif len(args.arguments) == 2:
+            print("** attribute name missing **")
+        elif len(args.arguments) == 3:
+            print("** value missing **")
+        else:
+            try:
+                obj = globals()[args.arguments[0]]
+            except KeyError:
+                print("** class doesn't exist **")
+                return
+            key = "{}.{}".format(args.arguments[0], args.arguments[1])
+            objects = storage.all()
+            for k in objects:
+                if k == key:
+                    setattr(objects[k], args.arguments[2], args.arguments[3])
+                    for k in objects:
+                        objects[k].save()
+                    return
+            print("** no instance found **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
