@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """file_storage module
-    dictionary <--> json file"""
+dictionary <--> json file"""
 import json
 from models.base_model import BaseModel
 from copy import deepcopy
-
+from models.state import State
+from models.city import City
+from models.place import Place
 
 class FileStorage:
     """class: FileStorage
