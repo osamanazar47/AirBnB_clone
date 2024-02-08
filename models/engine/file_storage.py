@@ -3,7 +3,7 @@
     dictionary <--> json file"""
 import json
 from models.base_model import BaseModel
-from copy import copy, deepcopy
+from copy import deepcopy
 
 
 class FileStorage:
