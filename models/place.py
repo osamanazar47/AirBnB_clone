@@ -5,7 +5,7 @@ from models.base_model import BaseModel
 
 class Place(BaseModel):
     """Represents a place
-    
+
     Attributes:
         city_id(str): the name and id of the city
         user_id(str): the name and id of the user
