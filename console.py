@@ -28,10 +28,6 @@ class HBNBCommand(cmd.Cmd):
         """Exits the interpreter"""
         return True
 
-    def process_command(self, command):
-        """Runs a command"""
-        self.onecmd(command)
-
     def do_create(self, arg):
         """Creates a new instance of BaseModel, saves it and prints the id"""
         pass
