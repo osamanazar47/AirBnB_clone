@@ -1,13 +1,17 @@
+#!/usr/bin/python3
 """
-Test BaseModel
+Test BaseModel:
+   classes:
+      
 """
+import models
 import unittest
 from datetime import datetime
 from models.base_model import BaseModel
 import time
 
 
-class BaseModelTest(unittest.TestCase):
+class TestBaseModel(unittest.TestCase):
     """TestCases for the BaseModel class"""
     def test_instance(self):
         """test __init__"""
@@ -57,3 +61,6 @@ class BaseModelTest(unittest.TestCase):
         self.assertIsInstance(base_dict['id'], str)
         self.assertIsInstance(base_dict['created_at'], str)
         self.assertIsInstance(base_dict['updated_at'], str)
+
+if __name__ == '__main__':
+    unittest.main()
