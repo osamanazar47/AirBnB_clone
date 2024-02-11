@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Defines the console of the AirBnB_clone"""
 import cmd
 import sys
 import argparse
@@ -11,13 +12,11 @@ from models.city import City
 from models.place import Place
 from models.review import Review
 from models.amenity import Amenity
-"""Define class HBNBCommand"""
 
 
 class HBNBCommand(cmd.Cmd):
     """A class that represent the implementation of the console"""
     prompt = "(hbnb) "
-    file = None
     cmd.use_rawinput = True
 
     def preloop(self):
