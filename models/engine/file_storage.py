@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""file_storage module
-dictionary <--> json file"""
+"""
+file_storage module
+dictionary <--> json file
+"""
 
 
 import json
@@ -42,6 +44,8 @@ class FileStorage:
         """add object to dictionary __objects attributes:
             obj: instance of a class
         """
+        if obj.id in FileStorage.__objects:
+            return
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         FileStorage.__objects[key] = obj
 
