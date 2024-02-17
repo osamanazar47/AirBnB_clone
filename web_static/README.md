@@ -23,3 +23,9 @@ During this project, you will learn how to manipulate HTML and CSS languages. HT
 2. CSS files:-
   An HTML page that displays a header and a footer by using CSS files (same as 1-index.html)
 
+3. Zoning done!:-
+  An HTML page that displays a header and footer by using CSS files (same as 2-index.html)
+
+4. Search!:-
+  An HTML page that displays a header, footer and a filters box with a search button.
+  Layout: (based on 3-index.html)
