@@ -29,3 +29,13 @@ During this project, you will learn how to manipulate HTML and CSS languages. HT
 4. Search!:-
   An HTML page that displays a header, footer and a filters box with a search button.
   Layout: (based on 3-index.html)
+
+5. More filters:-
+  An an HTML page that displays a header, footer and a filters box with Locations and Amenities filters added.
+  Layout: (based on 4-index.html)
+
+6. It's (h)over:-
+  An HTML page that displays a header, footer and a filters box with dropdown.
+  Update Locations and Amenities filters to display a contextual dropdown when the mouse is on the filter.
+  Layout: (based on 5-index.html)
+
