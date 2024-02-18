@@ -39,3 +39,10 @@ During this project, you will learn how to manipulate HTML and CSS languages. HT
   Update Locations and Amenities filters to display a contextual dropdown when the mouse is on the filter.
   Layout: (based on 5-index.html)
 
+7. Display results:-
+  An an HTML page that displays a header, footer, a filters box with dropdown and results.With places section addition
+  Layout: (based on 6-index.html)
+
+8. More details:-
+  An HTML page that displays a header, a footer, a filter box (dropdown list) and the result of the search Adding more info to the place article.
+  Layout: (based on 7-index.html)

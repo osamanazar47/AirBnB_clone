@@ -10,8 +10,12 @@ header {
     border-color: #CCCCCC;
 }
 header .icon {
+    width: 142px;
+    height: 100%;
     background: url("../images/icon\ \(1\).png") no-repeat center;
     padding-left: 20px;
-    width: 142px;
-    height: 60px;
+}
+
+header h1 {
+    margin-left: -50px;
 }
