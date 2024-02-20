@@ -70,7 +70,7 @@ article h2{
     border-bottom: 1px solid #DDDDDD;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .max_guest {
@@ -150,4 +150,66 @@ article h2{
     text-align: left;
     margin-top: 8px;
     margin-bottom: 0px;
+}
+
+.places .amenities,
+.places .reviews {
+    margin-top: 40px;
+    height: inherit;
+}
+
+.amenities_title,
+.reviews_title {
+  text-align: left;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.amenities h2,
+.reviews h2 {
+    font-size: 16px;
+}
+
+.places .reviews ul,
+.places .amenities ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.places .amenities ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    margin-bottom: 10px;
+    align-items: end;
+    font-size: 19px
+}
+
+.tv_icon {
+    background-image: url("../images/icon_tv.png");
+}
+
+.Wifi_icon {
+    background-image: url("../images/icon_wifi.png");
+}
+
+.tv_icon,
+.Wifi_icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.reviews h3 {
+    font-size: 14px;
+    text-align: left;
+}
+
+.reviews p {
+    font-size: 12px;
+    text-align: left;
 }

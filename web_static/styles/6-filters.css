@@ -33,7 +33,7 @@ section.filters .filters_button:hover {
     float: left;
 }
 
-.amenities {
+.filters .amenities {
     text-align: left;
     align-content: flex-start;
     height: 100%;
